@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import './index.css'
 
 function TaskListing() {
  const [taskdata,taskdatachange]=useState(null);
@@ -61,7 +62,7 @@ window.location.reload()
 
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='bgcolor text-dark'>
                   {
                     taskdata &&
                     taskdata.map(item=>(

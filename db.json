@@ -2,15 +2,21 @@
   "tasks": [
     {
       "id": 1,
-      "taskname": "Design Dashboard",
+      "taskname": "NextJS",
+      "worker": "Joel",
+      "phone": "0780036022"
+    },
+    {
+      "id": 2,
+      "taskname": "MongoDB",
       "worker": "Divin",
       "phone": "0791119264"
     },
     {
-      "id": 2,
-      "taskname": "NextJs",
-      "worker": "Patrick",
-      "phone": "0788900592"
+      "id": 3,
+      "taskname": "CSS AND HTML",
+      "worker": "Liline",
+      "phone": "0781344776"
     }
   ]
 }
