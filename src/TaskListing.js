@@ -11,7 +11,7 @@ function TaskListing() {
       }
       const RemoveFunction=(id)=>{
 if(window.confirm("Do you want to remove this task ??")){
-  fetch("http://localhost:8000/tasks/"+id,{
+  fetch("http://localhost:3000/tasks/"+id,{
  method:"DELETE",
 }).then((res)=>{
 alert("Removed succefully")
@@ -24,7 +24,7 @@ window.location.reload()
   
       }
  useEffect(()=>{
-  fetch("http://localhost:8000/tasks")
+  fetch("http://localhost:3000/tasks")
   .then((res)=>{
  return res.json();
   }).then((resp)=>{

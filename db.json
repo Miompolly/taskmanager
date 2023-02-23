@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "taskname": "NextJS",
-      "worker": "Joel",
-      "phone": "0780036022"
-    },
-    {
       "id": 2,
       "taskname": "MongoDB",
       "worker": "Divin",
       "phone": "0791119264"
     },
     {
-      "id": 3,
-      "taskname": "CSS AND HTML",
-      "worker": "Liline",
-      "phone": "0781344776"
+      "id": "1",
+      "taskname": "HTML",
+      "worker": "JOEL",
+      "phone": "058686"
     }
   ]
 }

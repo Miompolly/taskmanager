@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 function TaskEdit() {
   const {taskid}=useParams();
  
   // const [datas,setDatas]=useState({})
- useEffect(()=>{
-  fetch("http://localhost:8000/task/"+taskid).then((res)=>{
-      return res.json();
-  }).then((resp)=>{
-    //   idchange(resp.id);
-    //   tasknamechange(resp.taskname);
-    //  workerchange(resp.worker);
-    //   phonechange(resp.phone);
 
-  }).catch((err)=>{
-      console.log(err.message)
-  })
- },[]);
  const [id,idchange]=useState("")
  const [taskname,tasknamechange]=useState("")
  const [worker,workerchange]=useState("")
@@ -30,7 +18,7 @@ function TaskEdit() {
  const handlesubmit=(e)=>{
 e.preventDefault();
 const datas={id,taskname,worker,phone}
-fetch("http://localhost:8000/tasks/"+taskid,{
+fetch("http://localhost:3000/tasks/"+taskid,{
  method:"PUT",
  headers:{"content-type":"application/json"},
  body:JSON.stringify(datas)
@@ -57,7 +45,7 @@ navigate('/')
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Number</label>
-                                            <input disabled="disabled" value={id} className="form-control"></input>
+                                            <input onChange={e=>idchange(e.target.value)} value={id} className="form-control"></input>
                                         </div>
                                     </div>
                                    

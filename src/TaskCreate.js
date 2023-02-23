@@ -11,7 +11,7 @@ function TaskCreate() {
     const handlesubmit=(e)=>{
 e.preventDefault();
 const datas={id,taskname,worker,phone}
-fetch(" http://localhost:8000/tasks",{
+fetch(" http://localhost:3000/tasks",{
     method:"POST",
     headers:{"content-type":"application/json"},
     body:JSON.stringify(datas)
@@ -38,7 +38,7 @@ navigate('/')
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Number</label>
-                                            <input disabled="disabled" value={id} className="form-control"></input>
+                                            <input  onChange={e=>idchange(e.target.value)} value={id} className="form-control"></input>
                                         </div>
                                     </div>
                                    
